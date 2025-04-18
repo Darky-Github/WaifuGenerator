@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waifu Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Waifu Generator</h1>
+
+    <form id="waifuForm">
+      <input type="text" placeholder="Name" id="name" />
+      <input type="text" placeholder="Hair" id="hair" />
+      <input type="text" placeholder="Eyes" id="eyes" />
+      <input type="text" placeholder="Mood" id="mood" />
+      <input type="text" placeholder="Clothes" id="clothes" />
+      <input type="text" placeholder="Place" id="place" />
+      <!-- Add more traits as needed -->
+      <button type="submit">Generate Waifu</button>
+    </form>
+
+    <div id="waifuCard" class="hidden">
+      <h2 id="waifuName"></h2>
+      <canvas id="waifuCanvas" width="300" height="400"></canvas>
+      <div class="download-btns">
+        <button onclick="downloadImage('png')">Download PNG</button>
+        <button onclick="downloadImage('jpeg')">Download JPEG</button>
+        <button onclick="downloadImage('webp')">Download WebP</button>
+      </div>
+    </div>
+
+    <button onclick="redirectToNSFW()">NSFW Mode</button>
+    <button onclick="useAPIFallback()">Use API Fallback</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
